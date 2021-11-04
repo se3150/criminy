@@ -7,7 +7,8 @@ object CrimeStore {
 
     val crimes = mutableListOf<Crime>()
 
-    init {
+    fun loadCrimes() {
+        crimes.clear()
         for (i in 1 until 4) {
             val crime = Crime()
             crime.title = "Crime #$i"

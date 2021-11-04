@@ -22,6 +22,7 @@ class CrimeListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crime_list)
 
+        CrimeStore.loadCrimes()
         Log.d(TAG, "Total crimes: ${CrimeStore.crimes.size}")
 
         crimeRecyclerView = findViewById(R.id.crime_recycler_view) as RecyclerView
